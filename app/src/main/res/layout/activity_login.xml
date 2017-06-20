@@ -14,7 +14,7 @@
         android:layout_marginBottom="11dp" android:layout_alignParentTop="true">
         <TextView android:text="智能大数据定制平台" android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
-                  android:id="@+id/textView5" android:textSize="30sp"
+                  android:id="@+id/textView5" android:textSize="24sp"
                   android:textColor="@color/colorPrimary"
                   android:layout_centerVertical="true" android:layout_centerHorizontal="true"/>
     </RelativeLayout>
