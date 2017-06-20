@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_attach1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.administrator.myapplication.attach1Activity"
+    tools:showIn="@layout/activity_attach1">
+
+    <com.github.mikephil.charting.charts.CombinedChart
+        android:id="@+id/attach_CombinedChart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:layout_above="@+id/attach1_update"/>
+    <Button
+        android:text="attach时延用户数据"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/attach1_update" android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" android:layout_marginStart="91dp"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/background_light"/>
+
+</RelativeLayout>

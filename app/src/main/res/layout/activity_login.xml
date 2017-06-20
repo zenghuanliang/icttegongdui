@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/textView" android:layout_centerHorizontal="true"
+        android:layout_marginBottom="11dp" android:layout_alignParentTop="true">
+        <TextView android:text="智能大数据定制平台" android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/textView5" android:textSize="30sp"
+                  android:textColor="@color/colorPrimary"
+                  android:layout_centerVertical="true" android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+    <CheckBox
+        android:text="记住密码"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBox"
+        android:textColor="@color/colorPrimary"
+        android:layout_below="@+id/password" android:layout_alignStart="@+id/password"/>
+    <Button
+        android:text="登录"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Login"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:layout_alignEnd="@+id/password"
+        android:layout_alignTop="@+id/checkBox"/>
+    <TextView
+        android:text="账号"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView" android:textColor="@color/colorPrimary" android:textSize="18sp"
+        android:layout_marginBottom="13dp"
+        android:layout_above="@+id/username" android:layout_alignStart="@+id/textView2"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/password"
+        android:background="@drawable/k"
+
+        android:layout_marginStart="34dp"
+        android:layout_centerVertical="true" android:layout_alignParentStart="true"/>
+    <TextView
+        android:text="优化小工具V1.0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_alignParentBottom="true"
+        android:layout_marginBottom="12dp"
+        android:id="@+id/textView3" android:textColor="@color/colorPrimary"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/username"
+        android:background="@drawable/k"
+
+        android:layout_marginBottom="24dp" android:layout_above="@+id/textView2"
+        android:layout_alignStart="@+id/textView"/>
+    <TextView
+        android:text="密码"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:textColor="@color/colorPrimary" android:textSize="18sp"
+        android:layout_above="@+id/password" android:layout_alignStart="@+id/password"
+        android:layout_marginBottom="13dp"/>
+    <ImageView
+        android:layout_width="54dp"
+        android:layout_height="59dp" app:srcCompat="@drawable/logo1"
+        android:id="@+id/imageView12" android:layout_gravity="right"
+        android:layout_alignParentBottom="true" android:layout_alignParentEnd="true"/>
+
+
+</RelativeLayout>

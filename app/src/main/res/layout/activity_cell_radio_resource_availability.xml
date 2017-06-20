@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_cell_radio_resource_availability"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.administrator.myapplication.cellRadioResourceAvailabilityActivity">
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/chart.AppBarOverlay">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="?attr/colorPrimary"></android.support.v7.widget.Toolbar>
+
+
+        </android.support.design.widget.AppBarLayout>
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/userCon_lineChart"
+            android:layout_width="match_parent"
+            android:layout_height="209dp"
+
+           />
+        <Button
+            android:text="五步法成功率指标趋势"
+            android:layout_width="match_parent"
+            android:layout_height="37dp" android:id="@+id/five_succ_Button"/>
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/userCon_barChart"
+            android:layout_width="match_parent"
+            android:layout_height="188dp"/>
+
+        <Button
+            android:text="五步法时延指标趋势"
+            android:layout_width="match_parent"
+            android:layout_height="37dp" android:id="@+id/five_time_button"/>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="?attr/colorButtonNormal">
+
+                <RadioButton
+                    android:id="@+id/attach"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@android:color/background_light"
+                    android:text="ATTACH"
+                    android:background="@color/colorPrimary"
+                    android:textColor="@android:color/background_light" android:textSize="14sp"/>
+
+                <RadioButton
+                    android:id="@+id/eps"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@android:color/background_light"
+                    android:text="EPS成功率"
+                    android:background="@color/colorPrimary"
+                    android:textColor="@android:color/background_light" android:textSize="14sp"/>
+                <RadioButton
+                    android:id="@+id/dns"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@android:color/background_light"
+                    android:text="DNS成功率"
+                    android:background="@color/colorPrimary"
+                    android:textColor="@android:color/background_light"/>
+                <RadioButton
+                    android:id="@+id/tcp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@android:color/background_light"
+                    android:text="TCP成功率"
+                    android:background="@color/colorPrimary"
+                    android:textColor="@android:color/background_light"/>
+                <RadioButton
+                    android:id="@+id/bigpkt"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@android:color/background_light"
+                    android:text="HTTP速率"
+                    android:textColor="@android:color/background_light"
+                    android:background="@color/colorPrimary"/>
+
+        </RadioGroup>
+
+</LinearLayout>
+

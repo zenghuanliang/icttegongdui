@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">智能大数据定制平台</string>
+    <string name="action_settings">退出</string>
+    <string name="TextView">上海市</string>
+    <string name="KPI">网络KPI</string>
+    <string name="User">用户感知</string>
+    <string name="traffic">业务流量</string>
+    <string name="zhangjiang">湛江市</string>
+    <string name="maoming">茂名市</string>
+    <string name="yangjiang">阳江市</string>
+    <string name="meizhou">梅州市</string>
+    <string name="shanghai">上海市</string>
+    <string name="Button1">Attach成功率</string>
+    <string name="Button2">无线接通率</string>
+    <string name="Button3">切换成功率</string>
+    <string name="Button4">VOLTE掉话率</string>
+    <string name="wireless">无线接通率</string>
+    <string name="drop">无线掉话率</string>
+    <string name="drop1">无线掉话率更新</string>
+    <string name="prb">PRB可用率</string>
+    <string name="prb1">PRB可用率更新</string>
+
+    <string name="title_activity_attach_line_chart">AttachLineChartActivity</string>
+    <string name="title_activity_attach">Attach附着成功率</string>
+    <string name="title_activity_attach1">Attach时延</string>
+    <string name="title_activity_cell_radio_resource_availablility">用户感知指标</string>
+    <string name="title_activity_eps">EPS承载成功率</string>
+    <string name="title_activity_eps1">EPS承载时延</string>
+    <string name="title_activity_http">HTTP流量统计</string>
+    <string name="title_activity_dns">DNS成功率时延</string>
+    <string name="title_activity_kpi__wireless__access__rate">无线接通率</string>
+    <string name="title_activity_kpi__drop__call__rate">无线掉话率</string>
+    <string name="title_activity_kpi__prb__available__rate">PRB可用率</string>
+    <string name="title_activity_main">智能大数据定制平台</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_login1">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+
+</resources>
