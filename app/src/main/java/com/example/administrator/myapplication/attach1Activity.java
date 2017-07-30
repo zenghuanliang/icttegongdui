@@ -36,60 +36,7 @@ public class attach1Activity extends AppCompatActivity {
     ArrayList<Float> attach1_BarChart_F =new ArrayList<>();
     final String url="http://172.16.201.21:8090/com.IDC/user?action=attach1";
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_attach1);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        mCombinedChart = (CombinedChart)findViewById(R.id.attach_CombinedChart);
-        this.context = getApplicationContext();
-        CombinedChartMagnager.setLineName("Attach平均时延ms");
-        CombinedChartMagnager.setBarName("用户量");
-        new GetDataTask(url).execute();
-        CombinedChartMagnager.initDataStyle(context,mCombinedChart,1000,0,3000,0);
-        Button attach1 = (Button) findViewById(R.id.attach1_update);
-        attach1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                Message msg = new Message();
-                msg.what = 1;
-                mHandler_attach1.sendMessage(msg);
-            }
-        });
-
-        mHandler_attach1 = new Handler() {
-            @Override
-            public void handleMessage(Message msg) {
-                super.handleMessage(msg);
-                switch (msg.what) {
-                    case 0x1:
-                        CombinedChartMagnager.initConbinedChart(context,mCombinedChart,mCity,generateLineData(),generateBarData(),1000,0,3000,0);
-                        break;
-                }
-            }
-        };
-    }
-
-    private ArrayList<Entry> generateLineData() {
-
-        ArrayList<Entry> entries = new ArrayList<>();
-
-        for (int index = 0; index < attach1_LineChart_F.size(); index++)
-            entries.add(new Entry(attach1_LineChart_F.get(index), index));
-
-        return entries;
-    }
-    private ArrayList<BarEntry> generateBarData() {
-
-        ArrayList<BarEntry> entries = new ArrayList<>();
-
-        for (int index = 0; index < attach1_BarChart_F.size(); index++)
-            entries.add(new BarEntry(attach1_BarChart_F.get(index), index));
-
-        return entries;
-    }
     private class GetDataTask extends AsyncTask<Void, Void, String> {
 
         String url="";
@@ -170,6 +117,64 @@ public class attach1Activity extends AppCompatActivity {
             }
         }
     }
+
+    private ArrayList<Entry> generateLineData() {
+
+        ArrayList<Entry> entries = new ArrayList<>();
+
+        for (int index = 0; index < attach1_LineChart_F.size(); index++)
+            entries.add(new Entry(attach1_LineChart_F.get(index), index));
+
+        return entries;
+    }
+    private ArrayList<BarEntry> generateBarData() {
+
+        ArrayList<BarEntry> entries = new ArrayList<>();
+
+        for (int index = 0; index < attach1_BarChart_F.size(); index++)
+            entries.add(new BarEntry(attach1_BarChart_F.get(index), index));
+
+        return entries;
+    }
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_attach1);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        mCombinedChart = (CombinedChart)findViewById(R.id.attach_CombinedChart);
+        this.context = getApplicationContext();
+        mCombinedChart.setDescription("Attach时延");
+        CombinedChartMagnager.setLineName("Attach平均时延ms");
+        CombinedChartMagnager.setBarName("用户量");
+        new GetDataTask(url).execute();
+       // CombinedChartMagnager.initDataStyle(context,mCombinedChart,1000,0,3000,0);
+        //CombinedChartMagnager.initConbinedChart(context,mCombinedChart,mCity,generateLineData(),generateBarData(),1000,0,3000,0);
+        Button attach1 = (Button) findViewById(R.id.attach1_update);
+        attach1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+              Message msg = new Message();
+              msg.what = 1;
+              mHandler_attach1.sendMessage(msg);
+            }
+        });
+
+        mHandler_attach1 = new Handler() {
+            @Override
+            public void handleMessage(Message msg) {
+                super.handleMessage(msg);
+                switch (msg.what) {
+                    case 0x1:
+                        CombinedChartMagnager.initConbinedChart(context,mCombinedChart,mCity,generateLineData(),generateBarData(),1000,0,3000,0);
+                        break;
+                }
+            }
+        };
+    }
+
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

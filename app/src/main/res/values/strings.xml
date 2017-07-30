@@ -19,6 +19,8 @@
     <string name="drop1">无线掉话率更新</string>
     <string name="prb">PRB可用率</string>
     <string name="prb1">PRB可用率更新</string>
+    <string name="hint_etUser">    请输入用户名</string>
+    <string name="hint_etPassword">    请输入密码</string>
 
     <string name="title_activity_attach_line_chart">AttachLineChartActivity</string>
     <string name="title_activity_attach">Attach附着成功率</string>

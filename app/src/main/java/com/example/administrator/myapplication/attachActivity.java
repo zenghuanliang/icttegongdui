@@ -79,7 +79,7 @@ public class attachActivity extends AppCompatActivity {
                         LineChartManager.initSingleLineChart(context,attachLineChart,xValues1,getLineData(),100,0);
                         break;
                     case 0x2:
-                       Intent intent = new Intent(attachActivity.this, attach1Activity.class);
+                        Intent intent = new Intent(attachActivity.this, attach1Activity.class);
                         startActivity(intent);
                         break;
 

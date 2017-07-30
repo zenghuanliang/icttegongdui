@@ -22,6 +22,6 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_eps" android:layout_height="456dp"/>
+    <include layout="@layout/content_eps" />
 
 </android.support.design.widget.CoordinatorLayout>
